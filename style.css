@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: white; 
+    background-image: linear-gradient(to right, #87CEEB, #ddc934);
+    background-size: cover;
+    background-attachment: fixed; 
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-section {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.4);
+}
+
+.gallery-section:last-child {
+    border-bottom: none;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Base structural imagery layer */
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.15); 
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+/* Hard pointer-derived hardware interaction */
+.gallery-container img:hover,
+.gallery-container img.pseudo-hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 12px 20px rgba(255, 255, 255, 0.4);
+    z-index: 5;
+    border-color: #218838;
+}
+
+/* CONTROL UTILITY INTERFACES: BUTTONS */
+.nav-control-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.nav-control-btn:hover {
+    background-color: #fff;
+    color: #218838;
+    transform: scale(1.1);
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(138, 235, 28); 
+    color: #4169E1; 
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; 
+    margin: 10px; 
+}
+
+.view-more-btn:hover {
+    background-color: #f0f0f0; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
